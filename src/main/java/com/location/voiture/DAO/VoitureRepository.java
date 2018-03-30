@@ -6,5 +6,4 @@ import com.location.voiture.Entities.Voiture;
 
 public interface VoitureRepository 
          extends JpaRepository<Voiture, Integer> {
-
 }
