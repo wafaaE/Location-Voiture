@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Modification d'un paramètre</title>
+	<link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+</head>S
+<body>
+	<div class="toggle">	    
+	</div>
+	<div class="form">
+	<form th:action="@{UpdateParametre}" method="post" th:object="${parametre}">
+		<input type="text" th:field=*{ID} class="form-control" disabled/>
+		<input type="text" th:field=*{libelle} class="form-control" disabled/>
+		<input type="text" th:field="*{valeur}" class="form-control"/>
+		<input type="text" th:field="*{description}" class="form-control"/>
+		<button class="btn btn-lg btn-primary btn-block" name="Submit" value="Valider" type="submit" th:text="Valider"></button>
+	</form>	
+	</div>
+</body>
+</html>

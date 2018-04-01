@@ -2,7 +2,7 @@
 <html  xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8">
-<title>Insert title here</title>
+<title>Connexion</title>
  <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 	<body>
@@ -14,10 +14,8 @@
 			</div>
 			<div class="form">
 				<h2>Connectez-vous à votre compte</h2>
-				<form th:action="@{/login}" method="POST" class="form-signin">
-					<h3 class="form-signin-heading" th:text="Welcome"></h3>
-					<br/>
-					 
+				<form th:action="@{/login}" method="POST" class="form-signin">	
+					<br/> 
 					<input type="text" id="email" name="email"  th:placeholder="Email" class="form-control" /> <br/> 
 					<input type="password"  th:placeholder="Password" id="password" name="password" class="form-control" /> <br /> 
 						
@@ -26,7 +24,9 @@
 					</div>
 					<button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit" th:text="Login"></button>
 				</form>
+				<div class="cta"><a href="Inscription"><h3>S'inscrire si vous n'avez pas de compte</h3></a></div>
 			</div>  
+			    
 		</div>
 	</body>
 </html>
