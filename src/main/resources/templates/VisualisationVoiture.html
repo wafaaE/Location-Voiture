@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title>Liste des Voitures</title>
+		<link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	</head>
+	<body>
+	    <img src="Authentification/logo.png"/>
+		<div class="pen-title">
+			<h1>Bienvenue à l'espace Client </h1>
+		</div>
+	    <div class="module form-module" >
+			<div class="toggle" >
+		    
+		  	</div>
+		  <div class="form"  >
+		    <h2>Liste des voitures disponibles</h2><br/> 
+				<table >
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>Libelle</th>
+							<th>Prix</th>
+							<th>Caution</th>
+							<th>Defauts</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="e:${voiture}">
+							<td th:text="${e.idVoiture}"></td>
+							<td th:text="${e.libelle}"></td>
+							<td th:text="${e.prix}"></td>
+							<td th:text="${e.caution}"></td>
+							<td th:text="${e.defauts}"></td>
+							<td><button >Réserver</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>  
+		</div>
+	</body>
+</html>

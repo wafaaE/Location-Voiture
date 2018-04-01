@@ -38,6 +38,9 @@ public class Voiture implements Serializable{
 	@Column(name = "CAUTION")
 	private double caution;
 	
+	@Column(name="DISPONIBILITE")
+	private boolean disponibilite;
+	
 	@ManyToOne
 	@JoinColumn(name = "ID_RESERVATION")
 	private Reservation reservation;
