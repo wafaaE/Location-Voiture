@@ -35,6 +35,9 @@ public class Utilisateur implements Serializable{
 	@Column(name = "PROFIL")
 	private String profil;
 	
+	@Column(name="ENABLED")
+	private boolean enabled;
+	
 	@OneToMany(mappedBy = "utilisateur")
 	private List<Reservation> reservations;
 	
@@ -94,6 +97,12 @@ public class Utilisateur implements Serializable{
 	}
 	public void setAdresse(String adresse) {
 		this.adresse = adresse;
+	}
+	public void setEnabled(boolean enabled) {
+		this.enabled=enabled;
+	}
+	public boolean getEnabled() {
+		return enabled;
 	}
 	public String getProfil() {
 		return profil;

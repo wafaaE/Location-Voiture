@@ -11,10 +11,6 @@ import com.location.voiture.Entities.Voiture;
 public class LocationVoitureApplication {
 
 	public static void main(String[] args)  {
-		ApplicationContext ctx=	SpringApplication.run(LocationVoitureApplication.class, args);
-		VoitureRepository voitureRepository=ctx.getBean(VoitureRepository.class);
-		//DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-		//df.parse("2012-06-12");
-		voitureRepository.save(new Voiture("EF-456-AD", "Renault", "Aucun", 1300, 120, 200));
-		}
+		SpringApplication.run(LocationVoitureApplication.class, args);
+	}
 }

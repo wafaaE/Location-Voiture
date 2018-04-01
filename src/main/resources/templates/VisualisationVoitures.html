@@ -7,7 +7,7 @@
 		<link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
 	</head>
 	<body>
-	    <img src="Authentification/logo.png"/>
+	    <img src="/images/logo.png"/>
 		<div class="pen-title">
 			<h1>Bienvenue à l'espace Client </h1>
 		</div>
@@ -20,8 +20,8 @@
 				<table >
 					<thead>
 						<tr>
-							<th>Id</th>
-							<th>Libelle</th>
+							<th>ID</th>
+							<th>Modele</th>
 							<th>Prix</th>
 							<th>Caution</th>
 							<th>Defauts</th>
@@ -29,8 +29,8 @@
 					</thead>
 					<tbody>
 						<tr th:each="e:${voiture}">
-							<td th:text="${e.idVoiture}"></td>
-							<td th:text="${e.libelle}"></td>
+							<td th:text="${e.ID}"></td>
+							<td th:text="${e.marque}"></td>
 							<td th:text="${e.prix}"></td>
 							<td th:text="${e.caution}"></td>
 							<td th:text="${e.defauts}"></td>
