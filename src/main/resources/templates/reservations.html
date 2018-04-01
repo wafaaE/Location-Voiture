@@ -2,27 +2,34 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8">
+	<title>Liste des Voitures</title>
+	<link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <title>Mes reservations</title>
 </head>
 <body>
 	<h1>Liste de mes réservations</h1>
-	
-	<table>
-		<thead>
-			<tr>
-				<th>ID</th><th>Voiture</th><th>Date</th><th>Durée</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr th:each="r:${reservations}">
-				<td th:text="${r.id}"></td>
-				<td th:text="${r.voitures}"></td>
-				<td th:text="${r.dateDebut}"></td>
-				<td th:text="${r.duree}"></td>
-			</tr>
-		</tbody>
-	</table>
-
+	<div class="module form-module" >
+			<div class="toggle" >
+		    
+		  	</div>
+		  <div class="form"  >
+			<table>
+				<thead>
+					<tr>
+						<th>ID</th><th>Voiture</th><th>Date</th><th>Durée</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="r:${reservations}">
+						<td th:text="${r.ID}"></td>
+						<td th:text="${r.voiture.marque}"></td>
+						<td th:text="${r.dateDebut}"></td>
+						<td th:text="${r.duree}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </body>
 </html>

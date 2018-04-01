@@ -39,7 +39,7 @@ public class ReservationController {
 		String email = auth.getName();
 		Utilisateur user = utilisateurs.getOne(email);
 		
-		List<Reservation> reservations = repository.findByUtilisateur(user.getEmail());
+		List<Reservation> reservations = repository.findByUtilisateur(user);
 		
 		model.addAttribute("reservations", reservations);
 		return "reservations";
