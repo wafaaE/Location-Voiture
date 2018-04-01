@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Création d'une réservation</title>
+	<link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+</head>S
+<body>
+	<div class="toggle">	    
+	</div>
+	<div class="form">
+	<form th:action="@{newReservation}" method="post" th:object="${reservation}">
+		<input type="hidden" th:field=*{voiture.ID}/>
+		<input type="Date" th:field="*{dateDebut}" class="form-control"/>
+		<input type="text" th:field="*{duree}" class="form-control"/>
+		<button class="btn btn-lg btn-primary btn-block" name="Submit" value="Valider" type="submit" th:text="Valider"></button>
+	</form>
+	</div>
+</body>
+</html>

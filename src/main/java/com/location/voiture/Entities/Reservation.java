@@ -2,7 +2,6 @@ package com.location.voiture.Entities;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -32,8 +31,10 @@ public class Reservation implements Serializable{
 	@Column( name = "DUREE")
 	private int duree;
 	
-	@OneToMany(mappedBy = "reservation")
-	private List<Voiture> voitures;
+	//@OneToMany(mappedBy = "reservation")
+	@ManyToOne
+	@JoinColumn(name = "ID_VOITURE")
+	private Voiture voiture;
 
 	@ManyToOne
 	@JoinColumn(name = "ID_UTILISATEUR")
@@ -68,11 +69,11 @@ public class Reservation implements Serializable{
 	public void setDuree(int duree) {
 		this.duree = duree;
 	}
-	public List<Voiture> getVoitures() {
-		return voitures;
+	public Voiture getVoiture() {
+		return voiture;
 	}
-	public void setVoitures(List<Voiture> voitures) {
-		this.voitures = voitures;
+	public void setVoiture(Voiture voiture) {
+		this.voiture = voiture;
 	}
 	public Utilisateur getUtilisateur() {
 		return utilisateur;

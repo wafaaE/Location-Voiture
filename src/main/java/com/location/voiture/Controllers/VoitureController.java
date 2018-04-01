@@ -23,4 +23,11 @@ public class VoitureController {
 		model.addAttribute("voiture", voitures);
 		return"VisualisationVoitures";
 	}
+	
+	@RequestMapping(value="/rent")
+	public String rent(Long id, Model model) {
+		Voiture v = voitureRepository.getOne(id);
+		model.addAttribute("voiture", v);
+		return "redirect:/reservations/new?idVoiture="+id;
+	}
 }
