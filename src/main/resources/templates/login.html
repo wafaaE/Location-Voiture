@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+ <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+	<body>
+		<div class="pen-title">
+			<h1> Espace d'authentification</h1>
+		</div>
+		<div class="module form-module">
+			<div class="toggle">	    
+			</div>
+			<div class="form">
+				<h2>Connectez-vous à votre compte</h2>
+				<form th:action="@{/login}" method="POST" class="form-signin">
+					<h3 class="form-signin-heading" th:text="Welcome"></h3>
+					<br/>
+					 
+					<input type="text" id="email" name="email"  th:placeholder="Email" class="form-control" /> <br/> 
+					<input type="password"  th:placeholder="Password" id="password" name="password" class="form-control" /> <br /> 
+						
+					<div align="center" th:if="${param.error}">
+						<p style="font-size: 20; color: #FF1C19;">Informations de connexion erronées.</p>
+					</div>
+					<button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit" th:text="Login"></button>
+				</form>
+			</div>  
+		</div>
+	</body>
+</html>
